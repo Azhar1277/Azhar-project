@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Netflix</a>
+            <i class='bx bxs-shopping-bag' id="cart-icon"></i>  
+            <div class="side">
+              
+                
+           
+                    <div class="logo1">
+                        <h2>Netflix</h2>
+                    </div>
+                    
+                    <div class="menu-bar">
+                        <h3>Menu</h3>
+                    </div>
+                    <div id="search-icon">
+                        <input type="search" placeholder="search" id="search">
+
+
+                    </div>
+                   
+
+                    <div class="icon-items">
+                        <ul>
+                         
+                         
+                         <li>
+                             <i class='bx bxs-home' ></i>
+                             <a href="#">Home</a>
+                         </li>
+         
+                         <li>
+                             <i class='bx bxs-user-detail' ></i>
+                             <a href="#">User</a>
+                         </li>
+                         <li>
+                             <i class='bx bxs-message-rounded-dots' ></i>
+                             <a href="#">Message</a>
+                         </li>
+                         <li>
+                             <i class='bx bx-signal-3' ></i>
+                             <a href="#">Activity</a>
+                         </li>
+         
+                         <li>
+                             <i class='bx bxs-shopping-bag'></i>
+                             <a href="#">Products</a>
+                         
+                         </li>
+                         <li>
+                             <i class='bx bx-bell' ></i>
+                             <a href="#">Notification</a>
+                         </li>
+                         <li>
+                             <i class='bx bxs-group' ></i>
+                             <a href="#">Group</a>
+                         </li>
+                         <li>
+                             <i class='bx bxs-help-circle' ></i>
+                             <a href="#">Help</a>
+                         </li>
+                         <li>
+                             <i class='bx bxs-cog' ></i>
+                             <a href="#">Setting</a>
+                         </li>
+                         <li>
+                             <i class='bx bxs-log-out' ></i>
+                             <a href="#">Logout</a>
+                         </li>
+                        </ul>
+                     </div>
+                     <i class='bx bx-x' id="close-cart"></i>
+               
+                </div>
+
+            
+
+
+        </div>
+
+    </header>
+    <script>
+        let cart = document.querySelector('#cart-icon')
+        let sideBar = document.querySelector('.side')
+        let closeCart = document.querySelector('#close-cart')
+      
+        cart.onclick = function() {
+            sideBar.classList.add("active");
+
+        }
+        closeCart.onclick = function() {
+            sideBar.classList.remove("active");
+
+        };
+        
+       
+
+    </script>
+    
+</body>
+</html>
