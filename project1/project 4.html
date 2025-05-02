@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: azure;
+            overflow-x: none;
+        }
+        .head{
+            width: 100vw;
+            height: 80px;
+            background-color: azure;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            text-align: center;
+            text-decoration: none;
+
+        }
+        .logo img{
+            width: 200px;
+            height: 80px;
+            overflow: none;
+            border-radius: 1px;
+            }
+            .menu ul{
+                width: 100%;
+                line-height: 70px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 1.8rem;
+                list-style: none;
+                gap: 20px;
+              }
+              .abc{
+                width:14%;
+                line-height: 60px;
+                display: flex;
+                align-items:center;
+                
+
+              }
+              button{
+             
+            border-radius: 0.4rem;
+            background-color: antiquewhite;
+            transform: all 0.1s;
+           padding: 0.75rem 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 1s linear 0s
+         }
+              button:hover{
+                transform: scale(0.9);
+              }
+              .main-section{
+                max-width: 1100px;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding:1rem;
+                margin: auto;
+                margin-top: 10px;
+                text-align: center;
+                
+                
+
+              }
+              .content-leftbox{
+                text-align: center;
+                margin-top: 50px;
+               
+                
+              }
+              #heading{
+                font: size 1.5rem;
+                color: black;
+                font-weight: 600;
+                padding: 10px;
+              
+              }
+              #para1{
+                font-size: 3.5rem;
+                font-weight: 700;
+                padding: 10px;
+              }
+        #para2{
+            font-size:1rem;
+            font-weight: 200;
+            color: rgb(14, 14, 14);
+            padding: 7px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .button_group{
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            align-items:center;
+            justify-content: center;
+        }
+        .start-button{
+            border: none;
+            border-radius: 0.4rem;
+            background-color: darkorchid;
+            transform: all 0.1s;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+
+        }
+        .buy-button{
+            border: none;
+            border-radius: 0.4rem;
+            background-color:darkgray;
+            transform: all 0.1s;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background-color: rgba(114, 113, 113, 0.418);
+        }
+        .start-button:hover{
+            transform: scale(1.1);
+
+        }
+        .buy-button:hover{
+            transform: scale(1.1);
+        }
+        .content_rightbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+
+        }
+        .image_box{
+            border: none;
+            
+            overflow: hidden;
+            box-shadow: 0px 4px 8px black;
+            height:70vh;
+           
+
+            }
+            .section-image{
+              
+                border-radius: 1rem;
+                height:70vh;
+                width: 30vw;
+                margin-left: 70px;
+            }
+            @media screen and (min-width:768px) {
+                .main-section{
+                    flex-direction: row;
+                }
+                .content-leftbox{
+                    max-width: 50%;
+                    text-align: left;
+                    padding-left: 0;
+                    padding-top: 20px;
+                    
+                }
+                .button_group{
+                    justify-content: start;
+                }
+              
+             }
+             .company-container{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                margin-top: 1rem;
+               
+             }
+             .company-heading{
+                font-size: 2rem;
+             }
+             .company-grid{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 3.6rem;
+                padding: 1rem;
+                background-color: rgba(227, 226, 226, 0.779);
+                border: none;
+                border-radius: 0.678rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                padding: 1rem 2rem;
+
+             }
+             .company-logo{
+                font-size: 1rem;
+                font-weight: 500;
+                color: rgb(19, 22, 207);
+                display: flex;
+                gap: 0.5rem;
+             }
+             .logo-text{
+                font-size: 1rem;
+             }
+             .svg-img{
+                height: 1.56rem;
+             }
+             @media screen and (min-width:740px) {
+                .company-grid{
+                    grid-template-columns: repeat(4,1fr);
+                }
+             }
+             .feature-container{
+                background-color: white;
+                text-align: center;
+                padding: 2.5rem 0;
+             }
+             .feature-content{
+                width: 800px;
+                margin: 0 auto;
+                padding:0rem;
+             }
+             .main-info{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+             }
+             .heading1{
+                font-size:2rem ;
+                font-weight: 700;
+
+             }
+             .para2{
+                font-size: 1rem;
+                color: rgb(134, 131, 131);
+
+             }
+             .feature-grid{
+
+                display:grid;
+                grid-template-columns: repeat(2,1.8fr);
+                grid-gap: 2rem;
+                margin-top: 20px;
+                
+             }
+             
+             
+             .feature-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                gap: 0.7rem;
+                border: 1px solid rgb(98, 97, 97);
+                border-radius: 0.7rem;
+               
+                
+             }
+             .icon-container{
+               background-color:azure;
+               justify-content: center;
+               text-align: center;
+               width: 3.5rem;
+               height: 3.5rem;
+               border-radius: 50%;
+               margin-top: 15px;
+             }
+             .logo-all{
+                width: 1.8rem;
+                height: 1.8rem;
+                margin: 15px 0;
+              
+             }
+             .feature-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                gap: 0.8rem;
+                padding:17px;
+             }
+             .feature-tittle{
+                font-size: 1.5rem;
+                color: floralwhite;
+
+             }
+             .feature-desc{
+                font-size: 0.9rem;
+                color: white;
+
+             }
+             .feature-card:nth-child(1){
+                background-color: #4a90e2;
+             }
+            .feature-card:nth-child(2){
+                background-color:rgb(255,105,180);
+            }
+            .feature-card:nth-child(3){
+                background-color: #fcbf58;
+
+            }
+            .feature-card:nth-child(4){
+                background-color: #44bfc3;
+                
+            }
+
+            .feature-card:nth-child(5){
+                background-color: #77b05d;
+                
+            }
+            .feature-card:nth-child(6){
+                background-color: #7d78b1;
+                
+            }
+            @media screen and (max-width: 768px){
+                .feature-grid{
+                    grid-template-columns: repeat(1,1fr);
+                }
+
+            }
+            .testi-container{
+                background-color: azure;
+                max-width: 1300px;
+                padding: 0 2rem;
+                margin: 0 auto;
+                
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+            .main-heading{
+                font-size: 2rem;
+                font-weight: 700;
+                color: black;
+                padding: 2rem  0;
+            }
+            .testi-grid{
+                display: grid;
+                grid-template-columns: repeat(3,0.7fr);
+                grid-gap: 1.6rem;
+            }
+            .testi-card{
+                display: flex;
+                flex-direction:column;
+                border: 0.6px solid black;
+                border-radius:0.7rem;
+                padding: 2rem;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                box-shadow: 0 1px 10px black;
+                margin-bottom: 20px;
+                transition:all 0.2s ease, box-shadow 0.3s ease;
+
+            }
+            .testi-card:hover{
+                transform: scale(1.1);
+                box-shadow: 0.5px solid black;
+            }
+            .testi-text{
+                font-size: 1rem;
+                font-weight: 300;
+                color:black;
+                
+
+            }
+            .avatar img{
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+            }
+            .info h2{
+                font-size: 1.1rem;
+                color: rgba(13, 13, 222, 0.666);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+
+           
+                
+            
+
+
+
+
+        
+                
+        
+       
+
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="logo">
+                <img src="apple.jpg" alt="logo">
+
+            </div>
+            <div class="menu">
+                <ul>
+
+             
+                <li>Home</li>
+                <li>Features</li>
+                <li>pricing</li>
+                <li>about</li>
+                </ul>
+              
+                </div>
+                <div class="abc">
+                    <button>
+                        contact us
+                    </button>
+                </div>
+            
+                
+            
+        
+
+        </div>
+        <div class="content">
+            <section class="main-section">
+
+        <div class="content-leftbox">
+            <h2 id="heading">Very Proud To buy</h2>
+            <p id="para1">Welcome To The Future Of Technology</p>
+            <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam assumenda dolorum distinctio tenetur corporis, sunt libero numquam at perspiciatis. Est, molestiae nesciunt, error expedita nobis soluta enim beatae porro ea labore eius asperiores molestias officia architecto obcaecati quisquam aliquam exercitationem deleniti, non accusantium possimus voluptatum doloribus facilis itaque. Voluptas, ea?
+
+            </p>
+         <div class="button_group">
+          <a href="#" class="start-button">Buy Now</a>
+          <a href="#" class="buy-button">Pay Cash</a>
+
+        </div>
+        </div>
+        <div class="content_rightbox">
+            <div class="img_box">
+                <img src="iphone.png" alt="section-image" 
+                class="section-image"/>
+            </div>
+        </div>
+       
+        </section>
+       
+        </div>
+      
+       
+    </div>
+    <div class="company-container">
+        <h2 class="company-heading">Trusted by the best</h2>
+        <div class="company-grid">
+            <div class="company-logo">
+                <img src="google.png" class="svg-img"/>
+                <span class="logo-text">Google</span>
+            </div>
+            <div class="company-logo">
+                <img src="microsoft.png" class="svg-img"/>
+                <span class="logo-text">Microsoft</span>
+            </div>
+            <div class="company-logo">
+                <img src="flipkart.png" class="svg-img"/>
+                <span class="logo-text">Flipkart</span>
+            </div>
+            <div class="company-logo">
+                <img src="amazon.png" class="svg-img"/>
+                <span class="logo-text">Amazon</span>
+            </div>
+          
+        </div>
+    </div>
+   
+    <div class="feature-container">
+        <div class="feature-content">
+            <div class="main-info">
+                <h2 class="heading1"> Our Competetive Advantage</h2>
+                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius exercitationem recusandae? Ratione, consectetur illum fugit ea totam temporibus aliquid quaerat, nostrum minus facilis nulla?
+
+                </p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="logo bulb.png" alt="logo" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                            Personalised Learning
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. necessitatibus ipsa sapiente perferendis voluptatibus ipsam unde!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="cash logo.jpg" alt=" cashlogo" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                            affordability
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. aut nesciunt facilis suscipit voluptatem ipsum umde done.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="handshake logo.jpg" alt="handshake" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                         Industry partnership
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  voluptatem necessitatibus ipsa sapiente perferendis voluptatibus ipsam unde!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="tele logo.jpg" alt="telelogo" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                           Innovative Technology
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  necessitatibus ipsa sapiente perferendis voluptatibus ipsam unde!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="call logo.png" alt="calllogo" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                          Responsive Support
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo at odnecessitatibus ipsa sapiente perferendis voluptatibus ipsam unde!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img src="gaph logo.jpg" alt="graphlogo" class="logo-all">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-tittle">
+                         Analytics and Insights
+                        </div>
+                        <div class="feature-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo at odit eius eum quidem iusto  necessitatibus ipsa sapiente perferendis voluptatibus ipsam unde!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testi-container">
+        <div class="content">
+            <div class="main-heading">
+                What Others Say About Us
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <div class="testi-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate aliquid, aut molestiae voluptatum nesciunt nobis odio alias recusandae, exercitationem libero! Sapiente quisquam omnis dolorum dicta quis rem tempore tempora.
+
+                    </div>
+                    <div class="avatar">
+                        <img src="srk.png" alt="srk">
+                    </div>
+                    <div class="info">
+                        <h2>Shah Rukh Khan</h2>
+                        <p>he is the best actor in the world</p>
+                    </div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate aliquid, aut molestiae voluptatum nesciunt nobis odio alias recusandae, exercitationem libero! Sapiente quisquam omnis dolorum dicta quis rem tempore tempora.
+    
+                        </div>
+                        <div class="avatar">
+                            <img src="monica.png" alt="monica">
+                        </div>
+                        <div class="info">
+                            <h2>monica Belucci</h2>
+                            <p>he is the best actress in the world</p>
+                        </div>
+
+                </div>
+                
+               
+                <div class="testi-card">
+                    <div class="testi-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate aliquid, aut molestiae voluptatum nesciunt nobis odio alias recusandae, exercitationem libero! Sapiente quisquam omnis dolorum dicta quis rem tempore tempora.
+
+                    </div>
+                    <div class="avatar">
+                        <img src="david.png" alt="david">
+                    </div>
+                    <div class="info">
+                        <h2>David Beckham</h2>
+                        <p>he is the best footballerr in the world</p>
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="entire-container">
+        <div class="entire-content">
+            <div class="entire-leftbox">
+                <img src="" alt="">
+            </div>
+            <div class="entire-rightbox">
+                <div class="entire-info">
+                    <h2>Get The Latest Update</h2>
+                    <p>Sign for our newsletter</p>
+                </div>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <button>send</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
