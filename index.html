@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins" ,sans-serif;
+        
+      }
+
+      body{
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+      }
+      h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+      }
+      .container{
+        background-color:white;
+        width: 350px;
+      
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+        padding: 20px;
+
+
+      }
+
+      .one{
+        display: flex;
+        flex-direction:row;
+        padding-left: 15px;
+        
+        font-size:16px;
+        color: black;
+        font-weight: 600;
+        margin-top: 25px;
+     
+
+      }
+      .one input{
+     
+        margin-left:15px;
+        padding-left: 3px;
+       
+        color: black;
+      
+      }
+      .two{
+        display: flex;
+        flex-direction:row;
+        margin-top: 25px;
+       padding-left: 12px;
+      
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+    
+
+      }
+      .two input{
+        padding-left:3px;
+        margin-left: 15px;
+       
+        color: black;
+        
+      }
+    
+      button{
+        font-size: 20px;
+        color:black;
+        border-radius: 5px;
+    
+        margin-top: 40px;
+        margin-left:58px;
+       
+        
+        padding: 5px 20px 5px 20px;
+        background-color: lightblue;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 5px 5px 10px black;
+         
+       
+
+
+ 
+      }
+      button:hover{
+        transform:translateY(-3px);
+       
+      
+      }
+      #weight-guide{
+        margin-top: 50px;
+        padding: 15px;
+        padding-left: 45px;
+        line-height: 30px;
+
+      }
+      h3{
+        margin-left: 30px;
+        font-size: 20px;
+        color: dodgerblue;
+       
+      }
+    #weight-guide p
+    {
+        font-size: 16px;
+   color: black;
+   font-weight: 550;
+   
+    }
+    #result{
+     
+        margin: 20px;
+        padding: 10px;
+        padding-left:80px;
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+    }
+    #result1{
+        margin: 20px;
+        padding: 10px;
+        padding-left:40px;
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+
+
+    }
+    
+    
+
+    </style>    
+   
+</head>
+<body>
+
+
+    <h1>BMI Calculator</h1>
+    <div class="container">
+        <form>
+            <div class="one">
+                <label>Height <br> (cm) </label>
+                <input type="text" id="height" placeholder="Enter your height..">
+
+            </div>
+         
+        
+           <div class="two">
+            <label>Weight <br>(kg)</label>
+            <input type="text" id="weight" placeholder="Enter your weight..">
+
+
+           </div>
+            
+             
+             <button>Calculate BMI</button>  
+
+       
+           <div id="result">BMI =</div>
+
+           <div id="result1"></div>
+           
+
+           <div  id="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under weight = Less than 18.6</p>
+            <p>Normal Range = 18.6 and 24.5</p>
+            <p>Overweight = Greater than 25</p>
+
+           </div>
+
+         
+
+
+        </form>
+
+
+
+
+    </div>
+
+    <script>
+       let form =  document.querySelector('form');
+     //  let result1 = document.querySelector('#result1');
+
+
+       form.addEventListener("submit",(e) => {
+        e.preventDefault()
+
+         let height= parseInt(document.querySelector('#height').value);
+         let weight= parseInt(document.querySelector('#weight').value);
+       let result =  document.querySelector('#result');
+      let result1 = document.querySelector('#result1');
+
+       if( height===''|| height < 0 || isNaN(height)){
+        result.innerHTML="please enter a valid height";
+
+       }
+       else if(weight ===''|| weight < 0 || isNaN(weight)){
+        result.innerHTML="please enter a valid weight";
+       }
+       else{
+        let bmi = (weight/(height * height/ 10000)).toFixed(2);
+        result.innerHTML = `<span>BMI=${bmi}</span>`;
+
+
+
+
+        if(bmi < 18.6){
+             result1.innerHTML=`<span>Under Weight : ${bmi}</span>`
+          //  let guide = document.querySelector('#weight-guide').style.display='none'
+        }
+        else if(bmi >=18.6 && bmi < 24.5){
+             result1.innerHTML=`<span>Normal Weight : ${bmi}</span>`
+
+        }
+        else {
+            result1.innerHTML=`<span>Overweight : ${bmi}</span>`
+
+
+        }
+       
+       }
+
+    
+
+       })
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
